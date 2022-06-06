@@ -17,7 +17,7 @@ export default {
   background: #41444D;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 .odd span {

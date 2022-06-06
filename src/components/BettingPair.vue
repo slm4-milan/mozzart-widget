@@ -68,5 +68,6 @@ export default {
   color: #40A3FF;
   text-shadow: 0 0 10px;
   margin-bottom: 3px;
+  margin-right: 7px;
 }
 </style>

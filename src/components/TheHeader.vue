@@ -47,6 +47,7 @@ export default {
 .header-background {
   width: 100%;
   height: 56px;
+  background-size: cover;
 }
 
 .header-content {
@@ -74,11 +75,12 @@ export default {
   line-height: 8px;
   text-transform: uppercase;
   text-shadow: 0 0 7px #FFFFFF;
+  padding-left: 1px;
 }
 
 .warning {
   border-radius: 50%;
-  border: 0.8px solid #FFFFFF;
+  border: 1px solid #FFFFFF;
   width: 14px;
   height: 14px;
   display: flex;

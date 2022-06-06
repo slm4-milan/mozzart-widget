@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 @font-face {
   font-family: 'ProximaNovaRegular';
@@ -30,5 +30,6 @@ export default {
 .container {
   width: 847px;
   padding: 0;
+  /*margin-top: 5% !important;*/
 }
 </style>
