@@ -4,27 +4,7 @@
       <div class="align-self-center">
         <img :src="logoUrlBig" alt="">
       </div>
-      <div class="d-flex align-items-center">
-        <ul class="d-flex flex-row m-0 align-items-center">
-          <li class="d-flex align-items-center active-sport" :style="footballImgBig">
-          </li>
-          <li class="d-flex align-items-center" :style="basketballImgBig">
-
-          </li>
-          <li class="d-flex align-items-center" :style="tennisImgBig">
-
-          </li>
-          <li class="d-flex align-items-center" :style="hockeyImgBig">
-
-          </li>
-          <li class="d-flex align-items-center" :style="volleyballImgBig">
-
-          </li>
-          <li class="d-flex align-items-center" :style="handballImgBig">
-          </li>
-        </ul>
-
-      </div>
+      <the-nav></the-nav>
       <div class="d-flex">
         <div class="d-flex flex-row align-items-center">
           <div class="">
@@ -44,32 +24,18 @@
 
 
 <script>
+import TheNav from "@/components/TheNav";
+
 export default {
   name: "TheHeader",
+  components: {TheNav},
   data() {
     return {
       backgroundHeader: {
         'background-image': `url(${require('@/assets/images/header-pozadina.png')})`,
       },
       logoUrlBig: require('@/assets/images/logo/logo-veci.png'),
-      footballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/fudbal2.png')})`,
-      },
-      basketballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/kosarka2.png')})`,
-      },
-      tennisImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/tenis2.png')})`,
-      },
-      hockeyImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/hokej1.png')})`,
-      },
-      volleyballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/odbojka1.png')})`,
-      },
-      handballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/rukomet1.png')})`,
-      },
+
     }
   },
 }
@@ -121,19 +87,5 @@ export default {
   opacity: 0.5;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-  margin: 0 8px;
-  width: 20px;
-  height: 20px;
-}
-
-.active-sport {
-  border-radius: 50%;
-  box-shadow: 0 0 0 4.8px #40A3FF;
-}
 
 </style>
