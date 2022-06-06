@@ -15,14 +15,14 @@ export default {
 
 @font-face {
   font-family: 'ProximaNovaRegular';
-  src: url('/public/fonts/ProximaNovaRegular.otf') format('otf');
+  src: url('/public/fonts/ProximaNovaRegular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'ProximaNovaSemibold';
-  src: url('/public/fonts/ProximaNovaSemibold.otf') format('otf');
+  src: url('/public/fonts/ProximaNovaSemibold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
 }

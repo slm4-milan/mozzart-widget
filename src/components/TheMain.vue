@@ -1,6 +1,13 @@
 <template>
   <section class="d-flex flex-wrap">
     <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
+    <betting-pair></betting-pair>
   </section>
 </template>
 

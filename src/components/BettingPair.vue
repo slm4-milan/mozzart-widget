@@ -2,7 +2,7 @@
   <div class="d-flex bet">
     <div class="game">
       <div class="time">
-        Uto. 21:00
+        <span>Uto. 21:00</span>
       </div>
       <div class="teams">
         <span>Chelsea</span>
@@ -10,21 +10,29 @@
       </div>
     </div>
     <div class="bets-num d-flex align-items-end ms-auto">
-      3
+      <span>155</span>
+    </div>
+    <div class="odds align-items-center d-flex ">
+      <bet-button></bet-button>
+      <bet-button></bet-button>
+      <bet-button></bet-button>
     </div>
   </div>
 </template>
 
 <script>
+import BetButton from "@/components/BetButton";
+
 export default {
-  name: "BettingPair"
+  name: "BettingPair",
+  components: {BetButton}
 }
 </script>
 
 <style scoped>
-div .bet {
+.bet {
   /*ovo posle ide u media query*/
-  width: 50%;
+  width: calc(50% - 16px);
 }
 
 .teams span {
@@ -35,7 +43,7 @@ div .bet {
 }
 
 .teams > :first-child {
-  margin-bottom: 7px;
+  /*margin-bottom: 7px;*/
 }
 
 .time {
@@ -43,11 +51,14 @@ div .bet {
   font-size: 10px;
   line-height: 12px;
   color: #FDB913;
-  margin-bottom: 4px;
+  /*margin-bottom: 4px;*/
 }
 
 .bet {
-  padding: 4px 8px;
+  margin: 0px 8px;
+  border-bottom: solid 1px #41444D;
+  padding: 4px 0;
+
 }
 
 .bets-num {
@@ -55,6 +66,7 @@ div .bet {
   font-size: 13px;
   line-height: 16px;
   color: #40A3FF;
-  text-shadow: 0 0 10px
+  text-shadow: 0 0 10px;
+  margin-bottom: 3px;
 }
 </style>
