@@ -1,5 +1,6 @@
 <template>
   <the-header></the-header>
+  <the-main></the-main>
 </template>
 
 <script>
