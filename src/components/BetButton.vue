@@ -1,11 +1,12 @@
 <template>
   <div class="odd d-flex align-items-center justify-content-center">
-    <span>1.85</span>
+    <span>{{ tip }}</span>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['tip'],
   name: "BetButton"
 }
 </script>

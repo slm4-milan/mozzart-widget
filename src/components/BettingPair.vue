@@ -2,20 +2,18 @@
   <div class="d-flex bet">
     <div class="game">
       <div class="time">
-        <span>Uto. 21:00</span>
+        <span>{{ time }}</span>
       </div>
       <div class="teams">
-        <span>Chelsea</span>
-        <span>Manchester Utd.</span>
+        <span>{{ team1 }}</span>
+        <span>{{ team2 }}</span>
       </div>
     </div>
     <div class="bets-num d-flex align-items-end ms-auto">
-      <span>155</span>
+      <span>{{ numOfGames }}</span>
     </div>
     <div class="odds align-items-center d-flex ">
-      <bet-button></bet-button>
-      <bet-button></bet-button>
-      <bet-button></bet-button>
+      <bet-button v-for="odd in odds" :key="odd.tip" :tip="odd.odd"></bet-button>
     </div>
   </div>
 </template>
@@ -23,9 +21,17 @@
 <script>
 import BetButton from "@/components/BetButton";
 
+
 export default {
+  props: ['time', 'team1', 'team2', 'numOfGames', 'odds'],
   name: "BettingPair",
-  components: {BetButton}
+  components: {BetButton},
+  computed: {
+    pairs() {
+      return this.$store.getters.pickedSport.football;
+    },
+  },
+
 }
 </script>
 

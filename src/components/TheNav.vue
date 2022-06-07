@@ -1,7 +1,8 @@
 <template>
   <div class="d-flex align-items-center">
     <ul class="d-flex flex-row m-0 align-items-center">
-      <li class="d-flex align-items-center active-sport" :style="footballImgBig">
+      <li class="d-flex align-items-center active-sport" :style="footballImgBig"
+          @click="activeSport">
       </li>
       <li class="d-flex align-items-center" :style="basketballImgBig">
 
@@ -47,6 +48,13 @@ export default {
       },
     }
   },
+  computed: {},
+  methods: {
+    activeSport() {
+      // const test = Object.keys(this.$store.getters.pickedSport);
+      console.log(this.$store.getters.pickedSport.football[0].gameId)
+    },
+  }
 }
 </script>
 
@@ -59,6 +67,7 @@ li {
   margin: 0 8px;
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 
 .active-sport {

@@ -29,14 +29,19 @@
         </div>
       </div>
     </div>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
-    <betting-pair></betting-pair>
+
+    <betting-pair v-for="pair in pairs" :key="pair.gameId" :id="pair.gameId"
+                  :time="pair.time" :team1="pair.pairs[0].name"
+                  :team2="pair.pairs[1].name" :numOfGames="pair.numberOfGames"
+                  :odds="pair.offer"></betting-pair>
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+    <!--      <betting-pair></betting-pair>-->
+
   </section>
 </template>
 
@@ -45,8 +50,17 @@ import BettingPair from "@/components/BettingPair";
 
 export default {
   name: "TheMain",
-  components: {BettingPair}
+  components: {BettingPair},
+  data() {
+    return {};
+  },
+  computed: {
+    pairs() {
+      return this.$store.getters.pickedSport.football;
+    },
+  },
 }
+
 </script>
 
 <style scoped>
