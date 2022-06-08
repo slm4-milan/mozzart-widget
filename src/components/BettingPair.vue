@@ -13,7 +13,8 @@
       <span>{{ numOfGames }}</span>
     </div>
     <div class="odds align-items-center d-flex ">
-      <bet-button v-for="odd in odds" :key="odd.tip" :tip="odd.odd"></bet-button>
+      <bet-button v-for="odd in odds" :tipKey="odd.tip" :key="odd.tip" :id="id"
+                  :tip="odd.odd"></bet-button>
     </div>
   </div>
 </template>
@@ -23,7 +24,7 @@ import BetButton from "@/components/BetButton";
 
 
 export default {
-  props: ['time', 'team1', 'team2', 'numOfGames', 'odds'],
+  props: ['time', 'team1', 'team2', 'numOfGames', 'odds', 'id'],
   name: "BettingPair",
   components: {BetButton},
   computed: {

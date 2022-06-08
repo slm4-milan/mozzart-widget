@@ -6,7 +6,8 @@
       </div>
       <the-nav></the-nav>
       <div class="d-flex">
-        <div class="d-flex flex-row align-items-center">
+        <div class="text-white" v-if="activeTip">{{ activeTip.tip }}</div>
+        <div v-else class="d-flex flex-row align-items-center">
           <div class="">
             <p class="text-white m-0 pick-bet">klikni na kvotu</p>
           </div>
@@ -37,6 +38,11 @@ export default {
       logoUrlBig: require('@/assets/images/logo/logo-veci.png'),
 
     }
+  },
+  computed: {
+    activeTip() {
+      return this.$store.getters.getSelectedTip;
+    },
   },
 }
 </script>

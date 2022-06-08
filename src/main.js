@@ -6,6 +6,7 @@ import TheNav from "@/components/TheNav";
 import TheMain from "@/components/TheMain";
 import BettingPair from "@/components/BettingPair";
 import store from './store';
+import Test from "@/components/TestTest";
 
 const app = createApp(App)
 
@@ -13,7 +14,7 @@ app.component('the-header', TheHeader)
 app.component('the-nav', TheNav)
 app.component('the-main', TheMain)
 app.component('betting-pair', BettingPair)
-
+app.component('test-test', Test)
 app.use(router)
 app.use(store);
 

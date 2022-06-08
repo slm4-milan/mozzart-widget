@@ -34,13 +34,6 @@
                   :time="pair.time" :team1="pair.pairs[0].name"
                   :team2="pair.pairs[1].name" :numOfGames="pair.numberOfGames"
                   :odds="pair.offer"></betting-pair>
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
-    <!--      <betting-pair></betting-pair>-->
 
   </section>
 </template>
@@ -56,7 +49,7 @@ export default {
   },
   computed: {
     pairs() {
-      return this.$store.getters.pickedSport.football;
+      return this.$store.getters.activeSportPairs;
     },
   },
 }

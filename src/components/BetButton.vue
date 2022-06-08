@@ -1,13 +1,34 @@
 <template>
-  <div class="odd d-flex align-items-center justify-content-center">
+  <div class="odd d-flex align-items-center justify-content-center"
+       :class="{'active-tip': !!activeTip && activeTip.gameId===id && activeTip.tipKey === tipKey}"
+       @click="setTip({tipKey, gameId: id, tip})">
     <span>{{ tip }}</span>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['tip'],
-  name: "BetButton"
+  props: ['tip', 'id', 'tipKey'],
+  name: "BetButton",
+  methods: {
+    setTip(tip) {
+      if (!!this.activeTip && this.activeTip.gameId === this.id && this.activeTip.tipKey === this.tipKey) {
+        this.$store.commit('setTip', null)
+      } else {
+        this.$store.commit('setTip', tip)
+      }
+
+      console.log(tip);
+      // const activeSport = this.activeSport;
+    },
+
+  },
+  computed: {
+    activeTip() {
+      return this.$store.getters.getSelectedTip;
+    },
+  },
+
 }
 </script>
 
@@ -32,5 +53,17 @@ export default {
   text-align: center;
 
   color: #FFFFFF;
+}
+
+div {
+  cursor: pointer;
+}
+
+::selection {
+  background: transparent;
+}
+
+.active-tip {
+  background-color: #FDB913;
 }
 </style>

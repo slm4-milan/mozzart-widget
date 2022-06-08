@@ -1,17 +1,21 @@
 <template>
   <div class="d-flex align-items-center">
     <ul class="d-flex flex-row m-0 align-items-center">
-      <li class="d-flex align-items-center active-sport" :style="footballImgBig"
-          @click="activeSport">
+      <li class="d-flex align-items-center"
+          :class="{'active-sport': activeSport==='football'}"
+          :style="footballImgBig"
+          @click="activateSport('football')">
       </li>
-      <li class="d-flex align-items-center" :style="basketballImgBig">
+      <li class="d-flex align-items-center"
+          :class="{'active-sport': activeSport==='basketball'}"
+          :style="basketballImgBig"
+          @click="activateSport('basketball')">
 
       </li>
       <li class="d-flex align-items-center" :style="tennisImgBig">
 
       </li>
       <li class="d-flex align-items-center" :style="hockeyImgBig">
-
       </li>
       <li class="d-flex align-items-center" :style="volleyballImgBig">
 
@@ -48,13 +52,21 @@ export default {
       },
     }
   },
-  computed: {},
   methods: {
+    activateSport(sport) {
+      this.$store.commit('activateSport', sport)
+      console.log(sport);
+      // const activeSport = this.activeSport;
+    }
+  },
+  computed: {
     activeSport() {
-      // const test = Object.keys(this.$store.getters.pickedSport);
-      console.log(this.$store.getters.pickedSport.football[0].gameId)
+      return this.$store.getters.activeSport;
     },
-  }
+    activeTip() {
+      return this.$store.getters.getSelectedTip;
+    },
+  },
 }
 </script>
 
