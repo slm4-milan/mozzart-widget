@@ -66,4 +66,32 @@ div {
 .active-tip {
   background-color: #FDB913;
 }
+
+.active-tip span {
+  color: #2A2D35;
+}
+
+@media screen and (max-width: 687px) {
+  .odd {
+    width: 40px;
+    height: 40px;
+  }
+
+  .odd span {
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+@media screen and (max-width: 537px) {
+  .odd {
+    width: 64px;
+    height: 40px;
+  }
+
+  .odd span {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 </style>

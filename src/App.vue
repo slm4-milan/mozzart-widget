@@ -5,13 +5,15 @@
 
 <script>
 import TheHeader from "@/components/TheHeader";
+import TheMain from "@/components/TheMain";
 
 export default {
-  components: {TheHeader}
+  components: {TheHeader, TheMain}
 }
+
 </script>
 
-<style scoped>
+<style>
 
 @font-face {
   font-family: 'ProximaNovaRegular';
@@ -28,8 +30,9 @@ export default {
 }
 
 .container {
-  width: 847px;
+  max-width: 847px !important;
   padding: 0;
-  /*margin-top: 5% !important;*/
+  margin-top: 5% !important;
+
 }
 </style>

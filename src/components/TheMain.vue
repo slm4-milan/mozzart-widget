@@ -80,7 +80,7 @@ section {
 
 .tip-1x2 {
   width: 64px;
-  margin-left: 4px !important;
+  margin-left: 1px !important;
 }
 
 .tip-1x2 span {
@@ -92,6 +92,20 @@ section {
   text-shadow: none;
   text-transform: uppercase;
 
+}
+
+@media screen and (max-width: 687px) {
+  .tip-1x2 {
+    width: 40px;
+    margin-left: 1px !important;
+  }
+}
+
+@media screen and (max-width: 537px) {
+  .tip-1x2 {
+    width: 64px;
+    margin-left: 1px !important;
+  }
 }
 
 </style>

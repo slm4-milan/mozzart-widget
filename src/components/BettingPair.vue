@@ -77,4 +77,13 @@ export default {
   margin-bottom: 3px;
   margin-right: 7px;
 }
+
+@media screen and (max-width: 537px) {
+  .bet {
+    /*ovo posle ide u media query*/
+    width: calc(100% - 16px);
+  }
+}
+
+
 </style>
