@@ -3,7 +3,7 @@
   <section class="d-flex flex-wrap">
     <div class="d-flex tip align-items-center">
       <span class="justify-content-start">Najigraniji mečevi</span>
-      <div class="d-flex ms-auto">
+      <div class="d-flex ms-auto" v-if="width >= 538">
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>1</span>
         </div>
@@ -47,7 +47,21 @@ export default {
   name: "TheMain",
   components: {BettingPair},
   data() {
-    return {};
+    return {
+      width: window.innerWidth
+    };
+  },
+  created() {
+    window.addEventListener("resize", this.onResize);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.width = window.innerWidth;
+      this.height = window.innerHeight;
+    },
   },
   computed: {
     pairs() {

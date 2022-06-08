@@ -61,8 +61,6 @@ export default {
   methods: {
     activateSport(sport) {
       this.$store.commit('activateSport', sport)
-      console.log(sport);
-      // const activeSport = this.activeSport;
     }
   },
   computed: {

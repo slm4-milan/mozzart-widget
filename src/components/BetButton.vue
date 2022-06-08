@@ -17,9 +17,6 @@ export default {
       } else {
         this.$store.commit('setTip', tip)
       }
-
-      console.log(tip);
-      // const activeSport = this.activeSport;
     },
 
   },

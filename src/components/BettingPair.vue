@@ -34,7 +34,6 @@ export default {
 
 <style scoped>
 .bet {
-  /*ovo posle ide u media query*/
   width: calc(50% - 16px);
 }
 
@@ -46,7 +45,7 @@ export default {
 }
 
 .teams > :first-child {
-  /*margin-bottom: 7px;*/
+
 }
 
 .time {
@@ -54,7 +53,7 @@ export default {
   font-size: 10px;
   line-height: 12px;
   color: #FDB913;
-  /*margin-bottom: 4px;*/
+
 }
 
 .bet {
@@ -76,7 +75,6 @@ export default {
 
 @media screen and (max-width: 537px) {
   .bet {
-    /*ovo posle ide u media query*/
     width: calc(100% - 16px);
   }
 }
