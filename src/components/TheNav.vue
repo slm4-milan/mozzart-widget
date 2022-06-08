@@ -12,15 +12,21 @@
           @click="activateSport('basketball')">
 
       </li>
-      <li class="d-flex align-items-center" :style="tennisImgBig">
+      <li class="d-flex align-items-center" :class="{'active-sport': activeSport==='tennis'}"
+          :style="tennisImgBig" @click="activateSport('tennis')">
 
       </li>
-      <li class="d-flex align-items-center" :style="hockeyImgBig">
+      <li class="d-flex align-items-center" :style="hockeyImgBig"
+          :class="{'active-sport': activeSport==='hockey'}" @click="activateSport('hockey')">
       </li>
-      <li class="d-flex align-items-center" :style="volleyballImgBig">
+      <li class="d-flex align-items-center" :style="volleyballImgBig"
+          :class="{'active-sport': activeSport==='volleyball'}"
+          @click="activateSport('volleyball')">
 
       </li>
-      <li class="d-flex align-items-center" :style="handballImgBig">
+      <li class="d-flex align-items-center" :style="handballImgBig"
+          :class="{'active-sport': activeSport==='handball'}"
+          @click="activateSport('handball')">
       </li>
     </ul>
 

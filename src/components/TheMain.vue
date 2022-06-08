@@ -7,7 +7,8 @@
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>1</span>
         </div>
-        <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
+        <div v-if="activeSport !== 'tennis' && activeSport !== 'volleyball'"
+             class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>x</span>
         </div>
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
@@ -21,7 +22,8 @@
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>1</span>
         </div>
-        <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
+        <div v-if="activeSport !== 'tennis' && activeSport !== 'volleyball'"
+             class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>x</span>
         </div>
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
@@ -50,6 +52,9 @@ export default {
   computed: {
     pairs() {
       return this.$store.getters.activeSportPairs;
+    },
+    activeSport() {
+      return this.$store.getters.activeSport;
     },
   },
 }

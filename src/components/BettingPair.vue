@@ -12,7 +12,7 @@
     <div class="bets-num d-flex align-items-end ms-auto">
       <span>{{ numOfGames }}</span>
     </div>
-    <div class="odds align-items-center d-flex ">
+    <div class="odds align-items-center d-flex">
       <bet-button v-for="odd in odds" :tipKey="odd.tip" :key="odd.tip" :id="id"
                   :tip="odd.odd"></bet-button>
     </div>
@@ -27,11 +27,7 @@ export default {
   props: ['time', 'team1', 'team2', 'numOfGames', 'odds', 'id'],
   name: "BettingPair",
   components: {BetButton},
-  computed: {
-    pairs() {
-      return this.$store.getters.pickedSport.football;
-    },
-  },
+  computed: {},
 
 }
 </script>

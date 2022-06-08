@@ -426,7 +426,807 @@ const store = createStore({
                         ],
                         numberOfGames: '83'
                     },
-                ]
+                ], tennis: [
+                    {
+                        gameId: '17',
+                        time: 'Uto. 18:30',
+                        pairs: [
+                            {
+                                name: 'Imamura M.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Seelig K.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.70'
+                            }, {
+                                tip: '2',
+                                odd: '1.40'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '18',
+                        time: 'Uto. 19:00',
+                        pairs: [
+                            {
+                                name: 'Kawachi K.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Addison A.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.11'
+                            },
+                            {
+                                tip: '2',
+                                odd: '1.65'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '19',
+                        time: 'Uto. 19:30',
+                        pairs: [
+                            {
+                                name: 'Kumasaka T.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Palan D.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '3.00'
+                            }, {
+                                tip: '2',
+                                odd: '1.33'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '20',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Park U.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Cavrak K.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.30'
+                            },
+                            {
+                                tip: '2',
+                                odd: '3.20'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '21',
+                        time: 'Uto. 21:30',
+                        pairs: [
+                            {
+                                name: 'Tanuma R.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Suresh D.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.22'
+                            },
+                            {
+                                tip: '2',
+                                odd: '3.80'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '22',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Ly H.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Huang T.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.12'
+                            }, {
+                                tip: '2',
+                                odd: '5.30'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '23',
+                        time: 'Uto. 22:30',
+                        pairs: [
+                            {
+                                name: 'Descotte M.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Bianchini E.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.07'
+                            }, {
+                                tip: '2',
+                                odd: '6.80'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    }, {
+                        gameId: '24',
+                        time: 'Uto. 23:00',
+                        pairs: [
+                            {
+                                name: 'Barroso A.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Amoros P.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.12'
+                            }, {
+                                tip: '2',
+                                odd: '5.30'
+                            },
+                        ],
+                        numberOfGames: '12'
+                    },
+                ], hockey: [
+                    {
+                        gameId: '25',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Laval R.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Springfield T.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.45'
+                            }, {
+                                tip: 'x',
+                                odd: '4.1'
+                            }, {
+                                tip: '2',
+                                odd: '2.30'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '26',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Stockton Heat',
+                                id: '1'
+                            },
+                            {
+                                name: 'Chicago W.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.20'
+                            }, {
+                                tip: 'x',
+                                odd: '4.10'
+                            }, {
+                                tip: '2',
+                                odd: '2.60'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '27',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'NY Rangers',
+                                id: '1'
+                            },
+                            {
+                                name: 'Tampa Bay',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.65'
+                            }, {
+                                tip: 'x',
+                                odd: '3.80'
+                            }, {
+                                tip: '2',
+                                odd: '2.25'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '28',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Shawinigan Cataractes',
+                                id: '1'
+                            },
+                            {
+                                name: 'Charlottetown Islanders',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.81'
+                            }, {
+                                tip: 'x',
+                                odd: '4.12'
+                            }, {
+                                tip: '2',
+                                odd: '2.00'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '29',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Laval Rocket',
+                                id: '1'
+                            },
+                            {
+                                name: 'Springfield Thunderbirds',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.43'
+                            }, {
+                                tip: 'x',
+                                odd: '4.15'
+                            }, {
+                                tip: '2',
+                                odd: '2.29'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '30',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Florida Everblades',
+                                id: '1'
+                            },
+                            {
+                                name: 'Toledo Walleye',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.18'
+                            }, {
+                                tip: 'x',
+                                odd: '4.05'
+                            }, {
+                                tip: '2',
+                                odd: '2.56'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '31',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Sweden U18 W',
+                                id: '1'
+                            },
+                            {
+                                name: 'USA U18 W',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.50'
+                            }, {
+                                tip: 'x',
+                                odd: '3.00'
+                            }, {
+                                tip: '2',
+                                odd: '2.00'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    }, {
+                        gameId: '32',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Sydney Ice Dogs',
+                                id: '1'
+                            },
+                            {
+                                name: 'Melbourne Ice',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.77'
+                            }, {
+                                tip: 'x',
+                                odd: '5.35'
+                            }, {
+                                tip: '2',
+                                odd: '3.05'
+                            },
+                        ],
+                        numberOfGames: '57'
+                    },
+                ],
+                volleyball: [
+                    {
+                        gameId: '33',
+                        time: 'Uto. 18:30',
+                        pairs: [
+                            {
+                                name: 'Belgium',
+                                id: '1'
+                            },
+                            {
+                                name: 'Chech R.',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '4.40'
+                            }, {
+                                tip: '2',
+                                odd: '1.17'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '34',
+                        time: 'Uto. 19:00',
+                        pairs: [
+                            {
+                                name: 'Macedonia',
+                                id: '1'
+                            },
+                            {
+                                name: 'Romania',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '3.05'
+                            },
+                            {
+                                tip: '2',
+                                odd: '1.32'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '35',
+                        time: 'Uto. 19:30',
+                        pairs: [
+                            {
+                                name: 'Portugal W.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Luxembourg W',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.01'
+                            }, {
+                                tip: '2',
+                                odd: '10.90'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '36',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Poland',
+                                id: '1'
+                            },
+                            {
+                                name: 'Argentina',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.32'
+                            },
+                            {
+                                tip: '2',
+                                odd: '3.05'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '37',
+                        time: 'Uto. 21:30',
+                        pairs: [
+                            {
+                                name: 'Japan',
+                                id: '1'
+                            },
+                            {
+                                name: 'Netherlands',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.32'
+                            },
+                            {
+                                tip: '2',
+                                odd: '3.05'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '38',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'France',
+                                id: '1'
+                            },
+                            {
+                                name: 'Italy',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.22'
+                            }, {
+                                tip: '2',
+                                odd: '3.80'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '39',
+                        time: 'Uto. 22:30',
+                        pairs: [
+                            {
+                                name: 'Brazil',
+                                id: '1'
+                            },
+                            {
+                                name: 'Australia',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.02'
+                            }, {
+                                tip: '2',
+                                odd: '9.90'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    }, {
+                        gameId: '40',
+                        time: 'Uto. 23:00',
+                        pairs: [
+                            {
+                                name: 'Serbia',
+                                id: '1'
+                            },
+                            {
+                                name: 'Bulgaria',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.75'
+                            }, {
+                                tip: '2',
+                                odd: '2.25'
+                            },
+                        ],
+                        numberOfGames: '17'
+                    },
+                ],
+                handball: [
+                    {
+                        gameId: '41',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'GOG',
+                                id: '1'
+                            },
+                            {
+                                name: 'Aalborg',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.60'
+                            }, {
+                                tip: 'x',
+                                odd: '8.00'
+                            }, {
+                                tip: '2',
+                                odd: '2.85'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '42',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Aix',
+                                id: '1'
+                            },
+                            {
+                                name: 'Montpellier',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.05'
+                            }, {
+                                tip: 'x',
+                                odd: '8.00'
+                            }, {
+                                tip: '2',
+                                odd: '2.05'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '43',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Cesson',
+                                id: '1'
+                            },
+                            {
+                                name: 'Dunkerque',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.60'
+                            }, {
+                                tip: 'x',
+                                odd: '8.00'
+                            }, {
+                                tip: '2',
+                                odd: '2.85'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '44',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Chambery',
+                                id: '1'
+                            },
+                            {
+                                name: 'Saran',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.10'
+                            }, {
+                                tip: 'x',
+                                odd: '14.00'
+                            }, {
+                                tip: '2',
+                                odd: '9.00'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '45',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Chartres',
+                                id: '1'
+                            },
+                            {
+                                name: 'St. Raphael',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.20'
+                            }, {
+                                tip: 'x',
+                                odd: '8.00'
+                            }, {
+                                tip: '2',
+                                odd: '1.90'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '46',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Istres',
+                                id: '1'
+                            },
+                            {
+                                name: 'Nancy',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.55'
+                            }, {
+                                tip: 'x',
+                                odd: '8.50'
+                            }, {
+                                tip: '2',
+                                odd: '2.95'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '47',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Limoges',
+                                id: '1'
+                            },
+                            {
+                                name: 'Nimes',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '3.40'
+                            }, {
+                                tip: 'x',
+                                odd: '8.50'
+                            }, {
+                                tip: '2',
+                                odd: '1.45'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    }, {
+                        gameId: '48',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Nantes',
+                                id: '1'
+                            },
+                            {
+                                name: 'Toulouse',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '1.22'
+                            }, {
+                                tip: 'x',
+                                odd: '11.00'
+                            }, {
+                                tip: '2',
+                                odd: '5.20'
+                            },
+                        ],
+                        numberOfGames: '16'
+                    },
+                ],
             },
 
         };
