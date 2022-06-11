@@ -3,28 +3,28 @@
     <ul class="d-flex flex-row m-0 align-items-center">
       <li class="d-flex align-items-center"
           :class="{'active-sport': activeSport==='football'}"
-          :style="footballImgBig"
+          :style="footballImage"
           @click="activateSport('football')">
       </li>
       <li class="d-flex align-items-center"
           :class="{'active-sport': activeSport==='basketball'}"
-          :style="basketballImgBig"
+          :style="basketballImage"
           @click="activateSport('basketball')">
 
       </li>
       <li class="d-flex align-items-center" :class="{'active-sport': activeSport==='tennis'}"
-          :style="tennisImgBig" @click="activateSport('tennis')">
+          :style="tennisImage" @click="activateSport('tennis')">
 
       </li>
-      <li class="d-flex align-items-center" :style="hockeyImgBig"
+      <li class="d-flex align-items-center" :style="hockeyImage"
           :class="{'active-sport': activeSport==='hockey'}" @click="activateSport('hockey')">
       </li>
-      <li class="d-flex align-items-center" :style="volleyballImgBig"
+      <li class="d-flex align-items-center" :style="volleyballImage"
           :class="{'active-sport': activeSport==='volleyball'}"
           @click="activateSport('volleyball')">
 
       </li>
-      <li class="d-flex align-items-center" :style="handballImgBig"
+      <li class="d-flex align-items-center" :style="handballImage"
           :class="{'active-sport': activeSport==='handball'}"
           @click="activateSport('handball')">
       </li>
@@ -37,26 +37,7 @@
 export default {
   name: "TheNav",
   data() {
-    return {
-      footballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/fudbal2.png')})`,
-      },
-      basketballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/kosarka2.png')})`,
-      },
-      tennisImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/tenis2.png')})`,
-      },
-      hockeyImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/hokej1.png')})`,
-      },
-      volleyballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/odbojka1.png')})`,
-      },
-      handballImgBig: {
-        'background-image': `url(${require('@/assets/images/sprite-big/rukomet1.png')})`,
-      },
-    }
+    return {}
   },
   methods: {
     activateSport(sport) {
@@ -69,6 +50,46 @@ export default {
     },
     activeTip() {
       return this.$store.getters.getSelectedTip;
+    },
+    width() {
+      return this.$store.getters.getWindowWidth;
+    },
+    footballImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/fudbal2.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/fudbal2.png')})`}
+      }
+    }, basketballImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/kosarka2.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/kosarka2.png')})`}
+      }
+    }, tennisImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/tenis2.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/tenis2.png')})`}
+      }
+    }, hockeyImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/hokej1.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/hokej1.png')})`}
+      }
+    }, volleyballImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/odbojka1.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/odbojka1.png')})`}
+      }
+    }, handballImage() {
+      if (this.width >= 538)
+        return {'background-image': `url(${require('@/assets/images/sprite-big/rukomet1.png')})`}
+      else {
+        return {'background-image': `url(${require('@/assets/images/sprite-small/rukomet1.png')})`}
+      }
     },
   },
 }
@@ -89,5 +110,21 @@ li {
 .active-sport {
   border-radius: 50%;
   box-shadow: 0 0 0 4.8px #40A3FF;
+}
+
+@media screen and (max-width: 537px) {
+  .active-sport {
+    box-shadow: 0 0 0 2.8px #40A3FF;
+  }
+
+  li {
+    width: 16px;
+    height: 16px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+  
 }
 </style>

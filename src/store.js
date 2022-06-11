@@ -3,6 +3,7 @@ import {createStore} from "vuex";
 const store = createStore({
     state() {
         return {
+            windowWidth: '',
             activeSport: 'football',
             selectedTip: null,
             sports: {
@@ -1239,6 +1240,10 @@ const store = createStore({
         setTip(state, tip) {
             state.selectedTip = tip;
         },
+
+        setWindowWidth(state, width) {
+            state.windowWidth = width
+        },
     },
     getters: {
         activeSport(state) {
@@ -1250,6 +1255,9 @@ const store = createStore({
         },
         getSelectedTip(state) {
             return state.selectedTip;
+        },
+        getWindowWidth(state) {
+            return state.windowWidth;
         },
 
     }

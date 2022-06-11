@@ -8,7 +8,22 @@ import TheHeader from "@/components/TheHeader";
 import TheMain from "@/components/TheMain";
 
 export default {
-  components: {TheHeader, TheMain}
+  components: {TheHeader, TheMain},
+  data() {
+    return {};
+  },
+  created() {
+    window.addEventListener("resize", this.onResize);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.$store.commit('setWindowWidth', window.innerWidth);
+    },
+  },
+
 }
 
 </script>

@@ -2,7 +2,9 @@
 
   <section class="d-flex flex-wrap">
     <div class="d-flex tip align-items-center">
-      <span class="justify-content-start">Najigraniji mečevi</span>
+      <span v-if="width >= 538" @click="test"
+            class="justify-content-start">Najigraniji mečevi</span>
+      <the-nav v-else></the-nav>
       <div class="d-flex ms-auto" v-if="width >= 538">
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>1</span>
@@ -17,7 +19,7 @@
       </div>
 
     </div>
-    <div class="d-flex tip align-items-center">
+    <div class="d-flex tip-2 tip align-items-center">
       <div class="d-flex ms-auto">
         <div class="tip-1x2 d-flex justify-content-center align-items-center ms-auto">
           <span>1</span>
@@ -42,26 +44,13 @@
 
 <script>
 import BettingPair from "@/components/BettingPair";
+import TheNav from "@/components/TheNav";
 
 export default {
   name: "TheMain",
-  components: {BettingPair},
+  components: {BettingPair, TheNav},
   data() {
-    return {
-      width: window.innerWidth
-    };
-  },
-  created() {
-    window.addEventListener("resize", this.onResize);
-  },
-  unmounted() {
-    window.removeEventListener("resize", this.onResize);
-  },
-  methods: {
-    onResize() {
-      this.width = window.innerWidth;
-      this.height = window.innerHeight;
-    },
+    return {};
   },
   computed: {
     pairs() {
@@ -69,6 +58,9 @@ export default {
     },
     activeSport() {
       return this.$store.getters.activeSport;
+    },
+    width() {
+      return this.$store.getters.getWindowWidth;
     },
   },
 }
@@ -87,6 +79,17 @@ section {
 }
 
 .tip:first-child {
+  font-family: ProximaNovaRegular, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  color: #40A3FF;
+  text-shadow: 0px 0px 10px rgba(64, 163, 255, 0.6);
+}
+
+.tip-2:first-child {
   font-family: ProximaNovaRegular, sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -124,6 +127,15 @@ section {
   .tip-1x2 {
     width: 64px;
     margin-left: 1px !important;
+  }
+
+  .tip {
+    margin-left: 2px;
+    width: calc(40% - 10px);
+  }
+
+  .tip-2 {
+    width: calc(60% - 10px);
   }
 }
 

@@ -4,10 +4,11 @@
       <div class="align-self-center">
         <img :src="logoUrlBig" alt="">
       </div>
-      <the-nav></the-nav>
+      <the-nav v-if="width >= 538"></the-nav>
       <div class="d-flex">
         <div class="text-white" v-if="activeTip">
-          <div class="bet-checkout d-flex justify-content-between align-items-center">
+          <div class="bet-checkout d-flex flex-wrap align-items-center"
+               :class="justifyContent">
             <div class="picked-odd d-flex align-items-center">
               <span class="odd-text">Kvota:</span>
               <span class="odd-value">{{ activeTip.tip }}</span>
@@ -19,13 +20,14 @@
         </div>
         <div v-else class="d-flex align-items-center justify-content-end instructions">
           <div class="d-flex justify-content-end">
-            <div class="d-flex flex-wrap align-items-center justify-content-center ms-auto">
+            <div class="test-2 d-flex flex-wrap align-items-center justify-content-center ms-auto">
               <div class="">
                 <p class="text-white m-0 pick-bet">klikni na kvotu</p>
               </div>
               <div class="">
                 <p class="text-white fill-bet">popuni tiket</p>
               </div>
+              <div class="test"></div>
             </div>
           </div>
           <div class="warning">
@@ -57,6 +59,14 @@ export default {
     activeTip() {
       return this.$store.getters.getSelectedTip;
     },
+    width() {
+      return this.$store.getters.getWindowWidth;
+    },
+
+    justifyContent() {
+      return this.width >= 538 && this.width <= 687 ? 'justify-content-center' : 'justify-content-between';
+    },
+
   },
 }
 </script>
@@ -120,8 +130,8 @@ export default {
 
 .instructions {
   /*max-width: 197px;*/
-  /*width: 197px;*/
-  padding-left: 21.46px;
+  width: 197px;
+  /*padding-left: 21.46px;*/
 }
 
 .odd-text {
@@ -153,5 +163,36 @@ export default {
   text-shadow: 0 0 7px #FFFFFF;
   cursor: pointer;
 }
+
+@media screen and (min-width: 538px) and (max-width: 687px) {
+  .bet-checkout {
+    width: 124px;
+  }
+}
+
+@media screen and (max-width: 687px) {
+  .instructions {
+    /*max-width: 197px;*/
+    width: 124px;
+    /*padding-left: 21.46px;*/
+  }
+}
+
+@media screen and (max-width: 537px) {
+  .test {
+    width: 14px;
+    height: 8px;
+    background: linear-gradient(158.75deg, rgba(255, 255, 255, 0) 39%, #FFFFFF 81.5%), #FDB913;
+    box-shadow: 0px 0px 4px rgba(253, 185, 19, 0.7);
+    border-radius: 0.5px;
+    transform: rotate(180deg);
+  }
+
+  .test-2 {
+    margin-right: 24%;
+    width: 135px;
+  }
+}
+
 
 </style>
