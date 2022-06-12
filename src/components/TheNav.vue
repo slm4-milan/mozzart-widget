@@ -120,11 +120,12 @@ li {
   li {
     width: 16px;
     height: 16px;
+    margin: 0 4px;
   }
 
   ul {
     padding-left: 0;
   }
-  
+
 }
 </style>

@@ -13,6 +13,7 @@
               <span class="odd-text">Kvota:</span>
               <span class="odd-value">{{ activeTip.tip }}</span>
             </div>
+            <div :style="flexNewRow"></div>
             <div class="payment-proceed">
               <span>Uplati</span>
             </div>
@@ -64,9 +65,15 @@ export default {
     },
 
     justifyContent() {
-      return this.width >= 538 && this.width <= 687 ? 'justify-content-center' : 'justify-content-between';
+      if (this.width >= 362) {
+        return this.width >= 538 && this.width <= 687 ? 'justify-content-center' : 'justify-content-between';
+      }
+      return this.width <= 361 ? 'justify-content-center' : 'justify-content-between'
     },
 
+    flexNewRow() {
+      return this.width <= 361 ? 'flex-basis: 100%;' : 'flex-basis: 0%;'
+    },
   },
 }
 </script>
@@ -170,6 +177,12 @@ export default {
   }
 }
 
+@media screen  and (max-width: 362px) {
+  .bet-checkout {
+    width: 138px;
+  }
+}
+
 @media screen and (max-width: 687px) {
   .instructions {
     /*max-width: 197px;*/
@@ -191,6 +204,13 @@ export default {
   .test-2 {
     margin-right: 24%;
     width: 135px;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .test-2 {
+    margin-right: 5%;
+    width: 100px;
   }
 }
 

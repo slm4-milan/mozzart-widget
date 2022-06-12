@@ -139,4 +139,11 @@ section {
   }
 }
 
+@media screen and (max-width: 361px) {
+  .tip-1x2 {
+    width: 44px;
+    margin-left: 1px !important;
+  }
+}
+
 </style>

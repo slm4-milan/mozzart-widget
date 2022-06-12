@@ -91,4 +91,11 @@ div {
     line-height: 22px;
   }
 }
+
+@media screen and (max-width: 361px) {
+  .odd {
+    width: 44px;
+    height: 40px;
+  }
+}
 </style>
