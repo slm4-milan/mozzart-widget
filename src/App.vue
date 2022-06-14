@@ -35,15 +35,12 @@ export default {
     },
     setItemsPerPage(width) {
       if (width >= 538) {
-
         this.$store.commit('setItemsPerPage', 8);
         this.$store.commit('setNumOfPages', this.pairs.length)
       } else if (width > 361 && width <= 537) {
-
         this.$store.commit('setItemsPerPage', 4);
         this.$store.commit('setNumOfPages', this.pairs.length)
       } else if (width <= 361) {
-
         this.$store.commit('setItemsPerPage', 3);
         this.$store.commit('setNumOfPages', this.pairs.length)
       }

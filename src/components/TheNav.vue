@@ -41,10 +41,21 @@ export default {
   },
   methods: {
     activateSport(sport) {
-      this.$store.commit('activateSport', sport)
-    }
+      this.$store.commit('activateSport', sport);
+      this.setNumOfPages();
+      this.setActivePage();
+    },
+    setNumOfPages() {
+      this.$store.commit('setNumOfPages', this.pairs.length)
+    },
+    setActivePage() {
+      this.$store.commit('setActivePage', 1);
+    },
   },
   computed: {
+    pairs() {
+      return this.$store.getters.activeSportPairs;
+    },
     activeSport() {
       return this.$store.getters.activeSport;
     },

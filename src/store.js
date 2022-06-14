@@ -222,6 +222,215 @@ const store = createStore({
                         ],
                         numberOfGames: '364'
                     },
+                    {
+                        gameId: '49',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Manchester Utd.',
+                                id: '1'
+                            },
+                            {
+                                name: 'Chelsea',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.55'
+                            }, {
+                                tip: 'x',
+                                odd: '3.55'
+                            }, {
+                                tip: '2',
+                                odd: '2.55'
+                            },
+                        ],
+                        numberOfGames: '350'
+                    }, {
+                        gameId: '50',
+                        time: 'Uto. 20:00',
+                        pairs: [
+                            {
+                                name: 'Partizan',
+                                id: '1'
+                            },
+                            {
+                                name: 'Zvezda',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '3.55'
+                            }, {
+                                tip: 'x',
+                                odd: '2.05'
+                            }, {
+                                tip: '2',
+                                odd: '1.55'
+                            },
+                        ],
+                        numberOfGames: '364'
+                    }, {
+                        gameId: '51',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Everton',
+                                id: '1'
+                            },
+                            {
+                                name: 'Arsenal',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.33'
+                            }, {
+                                tip: 'x',
+                                odd: '4.25'
+                            }, {
+                                tip: '2',
+                                odd: '7.50'
+                            },
+                        ],
+                        numberOfGames: '360'
+                    }, {
+                        gameId: '52',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Wolves',
+                                id: '1'
+                            },
+                            {
+                                name: 'Liverpool',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.12'
+                            }, {
+                                tip: 'x',
+                                odd: '5.00'
+                            }, {
+                                tip: '2',
+                                odd: '7.00'
+                            },
+                        ],
+                        numberOfGames: '312'
+                    }, {
+                        gameId: '53',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Juventus',
+                                id: '1'
+                            },
+                            {
+                                name: 'Fiorentina',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.75'
+                            }, {
+                                tip: 'x',
+                                odd: '3.00'
+                            }, {
+                                tip: '2',
+                                odd: '3.33'
+                            },
+                        ],
+                        numberOfGames: '359'
+                    }, {
+                        gameId: '54',
+                        time: 'Uto. 21:00',
+                        pairs: [
+                            {
+                                name: 'Roma',
+                                id: '1'
+                            },
+                            {
+                                name: 'Torino',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.50'
+                            }, {
+                                tip: 'x',
+                                odd: '2.75'
+                            }, {
+                                tip: '2',
+                                odd: '3.00'
+                            },
+                        ],
+                        numberOfGames: '333'
+                    }, {
+                        gameId: '55',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Betis',
+                                id: '1'
+                            },
+                            {
+                                name: 'Real Madrid',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '2.50'
+                            }, {
+                                tip: 'x',
+                                odd: '4.00'
+                            }, {
+                                tip: '2',
+                                odd: '4.50'
+                            },
+                        ],
+                        numberOfGames: '318'
+                    }, {
+                        gameId: '56',
+                        time: 'Uto. 22:00',
+                        pairs: [
+                            {
+                                name: 'Villarreal',
+                                id: '1'
+                            },
+                            {
+                                name: 'Barcelona',
+                                id: '2'
+                            }
+                        ],
+                        offer: [
+                            {
+                                tip: '1',
+                                odd: '3.00'
+                            }, {
+                                tip: 'x',
+                                odd: '3.00'
+                            }, {
+                                tip: '2',
+                                odd: '2.50'
+                            },
+                        ],
+                        numberOfGames: '364'
+                    },
                 ], basketball: [
                     {
                         gameId: '9',
