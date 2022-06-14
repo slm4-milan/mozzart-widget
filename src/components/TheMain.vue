@@ -33,11 +33,17 @@
         </div>
       </div>
     </div>
-
-    <betting-pair v-for="pair in pairs" :key="pair.gameId" :id="pair.gameId"
+    <betting-pair v-for="pair in pairsPerPage" :key="pair.gameId" :id="pair.gameId"
                   :time="pair.time" :team1="pair.pairs[0].name"
                   :team2="pair.pairs[1].name" :numOfGames="pair.numberOfGames"
-                  :odds="pair.offer"></betting-pair>
+                  :odds="pair.offer">
+
+    </betting-pair>
+    <div class="d-flex align-items-center carousel-wrapper">
+      <div @click="setActivePage(index)" v-for="index in numOfButtons" :key="index"
+           class="carousel" :class="{'carousel-active': this.activePage === index}"></div>
+
+    </div>
 
   </section>
 </template>
@@ -48,11 +54,22 @@ import TheNav from "@/components/TheNav";
 
 export default {
   name: "TheMain",
-  components: {BettingPair, TheNav},
+  components: {
+    BettingPair, TheNav
+  },
   data() {
     return {};
   },
   computed: {
+    pairsPerPage() {
+      const firstIndex = (this.activePage - 1) * this.itemsPerPage;
+      const lastIndex = this.activePage * this.itemsPerPage;
+
+      return this.pairs.slice(firstIndex, lastIndex);
+    },
+    numOfButtons() {
+      return this.$store.getters.getNumOfPages;
+    },
     pairs() {
       return this.$store.getters.activeSportPairs;
     },
@@ -62,6 +79,21 @@ export default {
     width() {
       return this.$store.getters.getWindowWidth;
     },
+
+    activePage() {
+      return this.$store.getters.getActivePage;
+    },
+    itemsPerPage() {
+      return this.$store.getters.getNumOfItemsPerPage;
+    },
+  },
+  methods: {
+    setActivePage(pageNum) {
+      this.$store.commit('setActivePage', pageNum)
+    },
+  },
+  created() {
+    this.$store.commit('setNumOfPages', this.pairs.length);
   },
 }
 
@@ -116,6 +148,24 @@ section {
 
 }
 
+.carousel {
+  width: 33px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.carousel-active {
+  background: #40A3FF;
+
+}
+
+.carousel-wrapper {
+  padding: 8px 0;
+}
+
 @media screen and (max-width: 687px) {
   .tip-1x2 {
     width: 40px;
@@ -143,6 +193,15 @@ section {
   .tip-1x2 {
     width: 44px;
     margin-left: 1px !important;
+  }
+
+  .tip {
+    margin-left: 2px;
+    width: calc(50% - 10px);
+  }
+
+  .tip-2 {
+    width: calc(50% - 10px);
   }
 }
 

@@ -12,8 +12,15 @@ export default {
   data() {
     return {};
   },
+  computed: {
+    width() {
+      return this.$store.getters.getWindowWidth;
+    },
+  },
   created() {
     window.addEventListener("resize", this.onResize);
+    this.$store.commit('setWindowWidth', window.innerWidth);
+    this.setItemsPerPage(this.width)
   },
   unmounted() {
     window.removeEventListener("resize", this.onResize);
@@ -21,7 +28,24 @@ export default {
   methods: {
     onResize() {
       this.$store.commit('setWindowWidth', window.innerWidth);
+      this.setItemsPerPage(this.width)
+      console.log(this.$store.getters.getNumOfPages)
     },
+    setItemsPerPage(width) {
+      console.log(this.width)
+      if (width >= 538) {
+        console.log('najveci')
+        this.$store.commit('setItemsPerPage', 8);
+      } else if (width > 361 && width <= 537) {
+        console.log('srednji')
+
+        this.$store.commit('setItemsPerPage', 4);
+      } else if (width <= 361) {
+        console.log('usao u minimum')
+        this.$store.commit('setItemsPerPage', 3);
+      }
+    },
+
   },
 
 }

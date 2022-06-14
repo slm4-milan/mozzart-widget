@@ -3,6 +3,11 @@ import {createStore} from "vuex";
 const store = createStore({
     state() {
         return {
+            pagination: {
+                activePage: 1,
+                itemsPerPage: 2,
+                totalPages: null,
+            },
             windowWidth: '',
             activeSport: 'football',
             selectedTip: null,
@@ -1244,6 +1249,24 @@ const store = createStore({
         setWindowWidth(state, width) {
             state.windowWidth = width
         },
+
+        setItemsPerPage(state, itemsPerPage) {
+            state.pagination.itemsPerPage = itemsPerPage;
+        },
+
+        setNumOfPages(state, totalItems) {
+            const remainder = totalItems % state.pagination.itemsPerPage;
+            if (remainder > 0) {
+                state.pagination.totalPages = Math.floor(totalItems / state.pagination.itemsPerPage) + 1;
+            } else {
+                state.pagination.totalPages = totalItems / state.pagination.itemsPerPage;
+            }
+        },
+        setActivePage(state, pageNum) {
+            state.pagination.activePage = pageNum;
+        },
+
+
     },
     getters: {
         activeSport(state) {
@@ -1259,7 +1282,16 @@ const store = createStore({
         getWindowWidth(state) {
             return state.windowWidth;
         },
+        getNumOfPages(state) {
+            return state.pagination.totalPages
+        },
+        getActivePage(state) {
+            return state.pagination.activePage;
+        },
 
+        getNumOfItemsPerPage(state) {
+            return state.pagination.itemsPerPage
+        },
     }
 });
 

@@ -22,7 +22,6 @@
 <script>
 import BetButton from "@/components/BetButton";
 
-
 export default {
   props: ['time', 'team1', 'team2', 'numOfGames', 'odds', 'id'],
   name: "BettingPair",
