@@ -25,6 +25,7 @@
               <div class="">
                 <p class="text-white m-0 pick-bet">klikni na kvotu</p>
               </div>
+              <div :style="flexNewRow"></div>
               <div class="">
                 <p class="text-white fill-bet">popuni tiket</p>
               </div>
@@ -174,6 +175,10 @@ export default {
 @media screen and (min-width: 538px) and (max-width: 687px) {
   .bet-checkout {
     width: 124px;
+  }
+
+  .picked-odd {
+    margin: 0 1px;
   }
 }
 

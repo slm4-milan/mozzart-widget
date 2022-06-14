@@ -62,6 +62,7 @@ export default {
   },
   computed: {
     pairsPerPage() {
+
       const firstIndex = (this.activePage - 1) * this.itemsPerPage;
       const lastIndex = this.activePage * this.itemsPerPage;
 
