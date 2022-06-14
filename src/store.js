@@ -5,7 +5,7 @@ const store = createStore({
         return {
             pagination: {
                 activePage: 1,
-                itemsPerPage: 2,
+                itemsPerPage: null,
                 totalPages: null,
             },
             windowWidth: '',
