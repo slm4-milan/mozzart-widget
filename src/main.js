@@ -1,10 +1,11 @@
-import {createApp} from 'vue'
+import {createApp, defineAsyncComponent} from 'vue'
 import App from './App.vue'
-import TheHeader from "@/components/TheHeader";
-import TheNav from "@/components/TheNav";
-import TheMain from "@/components/TheMain";
-import BettingPair from "@/components/BettingPair";
 import store from './store';
+
+const TheHeader = defineAsyncComponent(() => import('@/components/TheHeader'));
+const TheNav = defineAsyncComponent(() => import('@/components/TheNav'));
+const TheMain = defineAsyncComponent(() => import('@/components/TheMain'));
+const BettingPair = defineAsyncComponent((() => import('@/components/BettingPair')));
 
 const app = createApp(App)
 
